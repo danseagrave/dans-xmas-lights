@@ -1,7 +1,8 @@
 # ignore music
-music/*.mp3
+*.mp3
 
 # ignore python stuff
+*.pyc
 .installed.cfg
 bin
 develop-eggs
