@@ -1,0 +1,9 @@
+from mpd import MPDClient
+client = MPDClient()               # create client object
+client.timeout = 10                # network timeout in seconds (floats allowed), default: None
+client.idletimeout = None          # timeout for fetching the result of the idle command is handled seperately, default: None
+client.connect("localhost", 6600)  # connect to localhost:6600
+print(client.mpd_version)          # print the MPD version
+print(client.listallinfo()) # print result of the command "find any house"
+client.close()                     # send the close command
+client.disconnect()     
